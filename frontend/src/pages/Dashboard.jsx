@@ -25,7 +25,7 @@ export function Dashboard() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const BACKEND_URL = "http://localhost:7777/api/v1";
+  const BACKEND_URL = "/api/v1";
 
   useEffect(() => {
     const fetchUser = async () => {

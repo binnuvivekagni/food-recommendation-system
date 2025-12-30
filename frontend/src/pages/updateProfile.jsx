@@ -71,7 +71,7 @@ const UpdateProfile = memo(({ user, setUser, setShowEditModal }) => {
       };
 
       const response = await axios.patch(
-        "http://localhost:7777/api/v1/user/updateUser",
+        "/api/v1/user/updateUser",
         updatedUserData,
         { withCredentials: true }
       );

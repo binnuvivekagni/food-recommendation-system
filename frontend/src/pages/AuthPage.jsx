@@ -22,7 +22,7 @@ export default function AuthPage() {
     weight: ""
   });
 
-  const BACKEND_URL = "http://localhost:7777/api/v1/auth";
+  const BACKEND_URL = "/api/v1/auth";
 
   const validateForm = () => {
     if (tab === "register") {

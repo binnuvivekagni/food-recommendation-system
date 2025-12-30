@@ -12,7 +12,7 @@ export default function History() {
   const [editing, setEditing] = useState(false);
   const [moodFoodId, setMoodFoodId] = useState(null);
 
-  const API_BASE = "http://localhost:7777/api/v1/moodfood";
+  const API_BASE = "/api/v1/moodfood";
 
   useEffect(() => {
     const fetchHistory = async () => {

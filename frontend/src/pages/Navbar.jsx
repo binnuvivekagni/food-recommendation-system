@@ -52,7 +52,7 @@ export function Navbar() {
         navigator.geolocation.getCurrentPosition(async (position) => {
           const { latitude, longitude } = position.coords;
           const response = await axios.get(
-            `http://localhost:7777/api/v1/weather?lat=${latitude}&lon=${longitude}`
+            `/api/v1/weather?lat=${latitude}&lon=${longitude}`
           );
           setWeather(response.data);
         });
@@ -66,7 +66,7 @@ export function Navbar() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:7777/api/v1/user/showMe", {
+        const response = await axios.get("/api/v1/user/showMe", {
           withCredentials: true,
         });
         setUser(response.data.user);
@@ -79,7 +79,7 @@ export function Navbar() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:7777/api/v1/auth/logout", {
+      await axios.get("/api/v1/auth/logout", {
         withCredentials: true,
       });
       localStorage.clear();

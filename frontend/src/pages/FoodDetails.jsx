@@ -29,7 +29,7 @@ export function FoodDetails({ food }) {
           const { latitude, longitude } = position.coords;
 
           try {
-            const response = await axios.get("http://localhost:7777/api/v1/nearby/restaurants", {
+            const response = await axios.get("/api/v1/nearby/restaurants", {
               params: { latitude, longitude, foodItem: foodName },
               withCredentials: true,
             });
